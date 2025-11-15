@@ -37,7 +37,7 @@ const handleSocketConnection = async (socket, io) => {
     deleteMessage(socket, io, ID);
   });
   socket.on("user-typing", (user) => {
-    socket.brodcast.emit("user-typing",  user );
+    socket.broadcast.emit("user-typing", user);
   });
 };
 
