@@ -36,6 +36,9 @@ const handleSocketConnection = async (socket, io) => {
   socket.on("delete-message", (ID) => {
     deleteMessage(socket, io, ID);
   });
+  socket.on("user-typing", (user) => {
+    socket.brodcast.emit("user-typing",  user );
+  });
 };
 
 module.exports = handleSocketConnection;
